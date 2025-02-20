@@ -1,6 +1,10 @@
-package com.study.TddCleanArch;
+package com.study.TddCleanArch.unit;
 
 import org.junit.jupiter.api.Test;
+
+import com.study.TddCleanArch.domain.entity.Coupon;
+import com.study.TddCleanArch.domain.entity.Item;
+import com.study.TddCleanArch.domain.entity.Order;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

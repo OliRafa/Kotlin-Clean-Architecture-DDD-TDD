@@ -1,10 +1,12 @@
-package com.study.TddCleanArch;
+package com.study.TddCleanArch.unit;
 
 import static org.junit.Assert.assertEquals;
 
 import java.time.LocalDate;
 
 import org.junit.Test;
+
+import com.study.TddCleanArch.domain.entity.Coupon;
 
 public class CouponTest {
     @Test

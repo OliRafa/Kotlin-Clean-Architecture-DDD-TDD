@@ -1,4 +1,4 @@
-package com.study.TddCleanArch;
+package com.study.TddCleanArch.domain.entity;
 
 public class Document {
     private String number;

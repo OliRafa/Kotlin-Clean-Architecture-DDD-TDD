@@ -1,4 +1,4 @@
-package com.study.TddCleanArch;
+package com.study.TddCleanArch.domain.entity;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
