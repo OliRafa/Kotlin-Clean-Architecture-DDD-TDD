@@ -43,4 +43,8 @@ public class Coupon {
         LocalDate today = LocalDate.now();
         return !this.isValid(today);
     }
+
+    public String getCode() {
+        return code;
+    }
 }

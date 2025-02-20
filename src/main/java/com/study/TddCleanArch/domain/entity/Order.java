@@ -20,7 +20,7 @@ public class Order {
         this.date = LocalDate.now();
     }
 
-    public void addItem(Item item, Integer quanitity) {
+    public void addItem(Item item, Number quanitity) {
         this.orderItems.add(new OrderItem(item.id(), item.price(), quanitity));
     }
 

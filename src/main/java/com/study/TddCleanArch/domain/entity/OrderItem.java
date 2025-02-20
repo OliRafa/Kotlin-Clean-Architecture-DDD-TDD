@@ -3,9 +3,9 @@ package com.study.TddCleanArch.domain.entity;
 public class OrderItem {
     private Integer idItem;
     private Double price;
-    private Integer quantity;
+    private Number quantity;
 
-    public OrderItem(Integer idItem, Double price, Integer quantity) {
+    public OrderItem(Integer idItem, Double price, Number quantity) {
         this.idItem = idItem;
         this.price = price;
         this.quantity = quantity;
@@ -15,11 +15,11 @@ public class OrderItem {
         return price;
     }
 
-    public Integer getQuantity() {
+    public Number getQuantity() {
         return quantity;
     }
 
     public Double getTotal() {
-        return this.price * this.quantity;
+        return this.price * this.quantity.doubleValue();
     }
 }
