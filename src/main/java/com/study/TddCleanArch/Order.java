@@ -1,5 +1,6 @@
 package com.study.TddCleanArch;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,9 +8,16 @@ public class Order {
     private Document document;
     private List<OrderItem> orderItems = new ArrayList<>();
     private Coupon coupon;
+    private LocalDate date;
+
+    public Order(String documentNumber, LocalDate date) {
+        this.document = new Document(documentNumber);
+        this.date = date;
+    }
 
     public Order(String documentNumber) {
         this.document = new Document(documentNumber);
+        this.date = LocalDate.now();
     }
 
     public void addItem(Item item, Integer quanitity) {
@@ -23,13 +31,15 @@ public class Order {
         }
 
         if (this.coupon != null) {
-            total -= total * this.coupon.percentage() / 100;
+            total -= total * this.coupon.percentage / 100;
         }
 
         return total;
     }
 
     public void addCoupon(Coupon coupon) {
-        this.coupon = coupon;
+        if (coupon.isValid(this.date)) {
+            this.coupon = coupon;
+        }
     }
 }
